@@ -1,0 +1,26 @@
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'homebrew/bundle'
+
+brew 'antigen'
+brew 'autojump'
+brew 'bash'
+brew 'node'
+brew 'tree'
+brew 'vim'
+brew 'wget'
+brew 'zsh'
+
+brew 'caskroom/cask/brew-cask'
+cask 'boot2docker'
+cask 'font-inconsolata'
+cask 'intellij-idea-ce'
+cask 'iterm2'
+cask 'java'
+cask 'mou'
+cask 'vagrant'
+cask 'virtualbox'
+
+#productivity - window and keyboards
+cask 'hammerspoon'
+cask 'karabiner'
