@@ -2,4 +2,18 @@
 
 cd "$(dirname "$0")/dotfiles"
 
-git ls-files -z | xargs -0 -n1 -I{} cp -prfv ~/{} {}
+
+case "$1" in
+   "--apply") echo "apply the changes to local machine."
+   git ls-files -z | xargs -0 -n1 -I{} cp -prfv {} ~/{}
+   ;;
+   
+   "--check") echo "Copying local changes in the repo."
+   git ls-files -z | xargs -0 -n1 -I{} cp -prfv ~/{} {} 
+   ;;
+   
+   *) echo "Usage direction:"
+	echo "\t To get any local changes copied, ./init.dotfiles --check"
+  	echo "\t To apply dotfiles to the host, ./init.dotfiles --apply" 
+   ;;
+esac
