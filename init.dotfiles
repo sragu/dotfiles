@@ -11,7 +11,7 @@ case "$1" in
    git ls-files -z | xargs -0 -n1 -I{} cp -prfv ~/{} {} 
    ;;
    
-   *) echo "Usage direction:"
+   *) echo "Usage:"
 	echo "\t To get any local changes copied, ./init.dotfiles --check"
 	echo "\t\t then do git diff to see whats different between the local manchine and the repo"
   	echo "\t To apply dotfiles to the host, ./init.dotfiles --force" 
