@@ -11,7 +11,6 @@
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
 [core]
   editor = vim
-  excludesfile = ~/.gitignore_global
 [user]
   name = Srinivasan Raguraman
   email = srinivasan.raguraman@gmail.com
@@ -21,4 +20,4 @@
   diff = auto
   branch = auto
   status = auto
-	ui = true
+  ui = true
