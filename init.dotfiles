@@ -2,7 +2,6 @@
 
 cd "$(dirname "$0")/dotfiles"
 
-
 case "$1" in
    "--force") echo "apply the changes to local machine."
    git ls-files -z | xargs -0 -n1 -I{} cp -prfv {} ~/{}
