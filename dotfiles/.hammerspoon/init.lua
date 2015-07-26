@@ -1,117 +1,51 @@
--- left, upper corner
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "I", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+-- Set up hotkey combinations
+local mash      = {"cmd", "alt", "ctrl"}
+local mashshift = {"cmd", "alt", "shift"}
+local funkymash = {"cmd", "ctrl", "shift"}
 
-    f.x = max.x / 2
-    f.y = max.y / 2
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
--- Right, lower corner
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+-- Set grid size.
+hs.grid.GRIDWIDTH  = 12
+hs.grid.GRIDHEIGHT = 12
+hs.grid.MARGINX    = 0
+hs.grid.MARGINY    = 0
+-- Set window animation off. It's much smoother.
+hs.window.animationDuration = 0
+-- Set volume increments
+local volumeIncrement = 5
 
-    f.x = max.x + (max.w / 2)
-    f.y = max.y + (max.h / 2)
-    f.w = max.w
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
--- Right upper corner
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "O", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash, ';', function() hs.grid.snap(hs.window.focusedWindow()) end)
+hs.hotkey.bind(mash, "'", function() hs.fnutils.map(hs.window.visibleWindows(), hs.grid.snap) end)
 
-    f.x = max.x + (max.w / 2)
-    f.y = max.y / 2
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
--- Left lower corner
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash,      '=', function() hs.grid.adjustWidth(1)   end)
+hs.hotkey.bind(mash,      '-', function() hs.grid.adjustWidth(-1)  end)
+hs.hotkey.bind(mashshift, '=', function() hs.grid.adjustHeight(1)  end)
+hs.hotkey.bind(mashshift, '-', function() hs.grid.adjustHeight(-1) end)
 
-    f.x = max.x / 2
-    f.y = max.y + (max.h / 2)
-    f.w = max.w / 2
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
--- Fullscreen
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mashshift, 'left',  function() hs.window.focusedWindow():focusWindowWest()  end)
+hs.hotkey.bind(mashshift, 'right', function() hs.window.focusedWindow():focusWindowEast()  end)
+hs.hotkey.bind(mashshift, 'up',    function() hs.window.focusedWindow():focusWindowNorth() end)
+hs.hotkey.bind(mashshift, 'down',  function() hs.window.focusedWindow():focusWindowSouth() end)
 
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w
-    f.h = max.h
-    win:setFrame(f)
-end)
--- Right side
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash, 'M', hs.grid.maximizeWindow)
 
-    f.x = max.x + (max.w / 2)
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
-    win:setFrame(f)
-end)
--- Left side
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash, 'F', function() hs.window.focusedWindow():toggleFullScreen() end)
 
-    f.x = max.x
-    f.y = max.y
-    f.w = max.w / 2
-    f.h = max.h
-    win:setFrame(f)
-end)
--- Bottom
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash, 'N', hs.grid.pushWindowNextScreen)
+hs.hotkey.bind(mash, 'P', hs.grid.pushWindowPrevScreen)
 
-    f.x = 0
-    f.y = max.y + (max.h / 2)
-    f.w = max.w
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
--- Top
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Up", function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local screen = win:screen()
-    local max = screen:frame()
+hs.hotkey.bind(mash, 'J', hs.grid.pushWindowDown)
+hs.hotkey.bind(mash, 'K', hs.grid.pushWindowUp)
+hs.hotkey.bind(mash, 'H', hs.grid.pushWindowLeft)
+hs.hotkey.bind(mash, 'L', hs.grid.pushWindowRight)
 
-    f.x = 0
-    f.y = 0
-    f.w = max.w
-    f.h = max.h / 2
-    win:setFrame(f)
-end)
+hs.hotkey.bind(mash, 'U', hs.grid.resizeWindowTaller)
+hs.hotkey.bind(mash, 'O', hs.grid.resizeWindowWider)
+hs.hotkey.bind(mash, 'I', hs.grid.resizeWindowThinner)
+hs.hotkey.bind(mash, 'Y', hs.grid.resizeWindowShorter)
+
+hs.hotkey.bind(mashshift, 'T', function() hs.alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4) end)
+
+hs.hotkey.bind(mashshift, ']', function() hs.audiodevice.defaultOutputDevice():setVolume(hs.audiodevice.current().volume + 5) end)
+hs.hotkey.bind(mashshift, '[', function() hs.audiodevice.defaultOutputDevice():setVolume(hs.audiodevice.current().volume - 5) end)
+
+hs.alert.show("Hammerspoon, at your service.", 3)
