@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd "$(dirname "$0")/dotfiles"
+
+git ls-files -z | xargs -0 -n1 -I{} cp -prfv ~/{} {}
