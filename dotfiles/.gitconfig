@@ -3,10 +3,22 @@
   st = status
   co = checkout
   lg = log
+  l  = log --graph --decorate --pretty=format:'%h was %an, %ar, message: %s'
+  ls = log --graph --decorate --stat --pretty=format:'%h was %an, %ar, message: %s'
+  pr = pull --rebase
+  headless = !sh -c 'git symbolic-ref HEAD refs/heads/$0 && rm .git/index && git clean -fdx'
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
 [core]
   editor = vim
+  excludesfile = ~/.gitignore_global
 [user]
   name = Srinivasan Raguraman
   email = srinivasan.raguraman@gmail.com
 [push]
   default = simple
+[color]
+  diff = auto
+  branch = auto
+  status = auto
+	ui = true
