@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+	<item>	
+	    <name>Remap Right Command to Hyper</name>
+	    <appendix>OS X doesn't have a Hyper. This maps Right Command to Control + Shift + Option + Command.</appendix>
+
+	    <identifier>osx.right_command_to_hyper</identifier>
+
+	    <autogen>
+	        --KeyToKey--
+	        KeyCode::F19,
+
+	        KeyCode::COMMAND_R,
+	        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+	    </autogen>
+	</item>
+</root>

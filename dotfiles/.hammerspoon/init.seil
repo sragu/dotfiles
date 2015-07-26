@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cli=/Applications/Seil.app/Contents/Library/bin/seil
+
+$cli set keycode_command_r 80
+/bin/echo -n .
+/bin/echo
