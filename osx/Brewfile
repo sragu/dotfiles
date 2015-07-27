@@ -11,6 +11,8 @@ brew 'vim'
 brew 'wget'
 brew 'zsh'
 
+brew 'gradle'
+
 brew 'caskroom/cask/brew-cask'
 tap 'caskroom/versions'
 
