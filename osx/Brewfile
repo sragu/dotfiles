@@ -12,6 +12,8 @@ brew 'wget'
 brew 'zsh'
 
 brew 'caskroom/cask/brew-cask'
+tap 'caskroom/versions'
+
 cask 'boot2docker'
 cask 'font-inconsolata'
 cask 'intellij-idea-ce'
@@ -20,6 +22,8 @@ cask 'java'
 cask 'mou'
 cask 'vagrant'
 cask 'virtualbox'
+
+cask 'google-chrome-canary'
 
 #productivity - window and keyboards
 cask 'hammerspoon'
