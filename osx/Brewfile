@@ -10,6 +10,9 @@ brew 'tree'
 brew 'vim'
 brew 'wget'
 brew 'zsh'
+brew 'watch'
+
+brew 'youtube-dl'
 
 brew 'gradle'
 
