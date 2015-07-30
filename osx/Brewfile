@@ -29,6 +29,7 @@ cask 'vagrant'
 cask 'virtualbox'
 
 cask 'google-chrome-canary'
+cask 'skype'
 
 #productivity - window and keyboards
 cask 'hammerspoon'
