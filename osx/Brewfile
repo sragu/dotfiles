@@ -31,6 +31,9 @@ cask 'virtualbox'
 cask 'google-chrome-canary'
 cask 'skype'
 
+#for resume generation
+cask 'wkhtmltopdf'
+
 #productivity - window and keyboards
 cask 'hammerspoon'
 cask 'karabiner'
