@@ -16,10 +16,12 @@ brew 'youtube-dl'
 
 brew 'gradle'
 
+brew 'boot2docker'
+brew 'docker'
+
 brew 'caskroom/cask/brew-cask'
 tap 'caskroom/versions'
 
-cask 'boot2docker'
 cask 'font-inconsolata'
 cask 'intellij-idea-ce'
 cask 'iterm2'

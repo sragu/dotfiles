@@ -2,7 +2,6 @@ source /usr/local/share/antigen.zsh
 
 antigen-use oh-my-zsh
 
-antigen bundle git
 antigen bundle autojump
 antigen bundle osx
 antigen bundle sublime
@@ -15,3 +14,4 @@ antigen apply
 
 #avoid zsh reporting when wildcard is not resolved, and instead just pass it to the command as it is.
 unsetopt nomatch
+
