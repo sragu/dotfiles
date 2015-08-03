@@ -34,7 +34,7 @@ cask 'skype'
 #for resume generation
 cask 'wkhtmltopdf'
 
-cask 'omnigraffle-professional5'
+cask 'omnigraffle'
 
 #productivity - window and keyboards
 cask 'hammerspoon'
