@@ -16,6 +16,9 @@ brew 'youtube-dl'
 
 brew 'gradle'
 
+brew 'jruby'
+brew 'leiningen'
+
 brew 'boot2docker'
 brew 'docker'
 
@@ -26,7 +29,10 @@ cask 'font-inconsolata'
 cask 'intellij-idea-ce'
 cask 'iterm2'
 cask 'java'
+
 cask 'mou'
+cask 'lightpaper'
+
 cask 'vagrant'
 cask 'virtualbox'
 
