@@ -12,6 +12,8 @@ brew 'wget'
 brew 'zsh'
 brew 'watch'
 
+brew 'imagesnap'
+
 brew 'youtube-dl'
 
 brew 'gradle'
