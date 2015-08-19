@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#captures your mood at commit. smile please. :)
+git log -1 --format=format:%h.jpg | xargs -I{} imagesnap -q -w 1 ~/.commits/{}
