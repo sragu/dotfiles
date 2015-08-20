@@ -17,6 +17,7 @@ brew 'imagesnap'
 brew 'youtube-dl'
 
 brew 'gradle'
+brew 'graphviz'
 
 brew 'jruby'
 brew 'leiningen'
