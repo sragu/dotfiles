@@ -51,5 +51,6 @@ cask 'omnigraffle'
 cask 'hammerspoon'
 cask 'karabiner'
 cask 'seil'
+cask 'flux-beta'
 
 cask 'google-drive'
