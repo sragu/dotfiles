@@ -46,6 +46,8 @@ cask 'skype'
 cask 'wkhtmltopdf'
 
 cask 'omnigraffle'
+cask 'scrivener'
+cask 'atom'
 
 #productivity - window and keyboards
 cask 'hammerspoon'
