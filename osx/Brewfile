@@ -22,6 +22,10 @@ brew 'graphviz'
 brew 'jruby'
 brew 'leiningen'
 
+# erlang 17 required for riak-core
+brew 'erlang-r17'
+
+
 brew 'docker'
 
 brew 'gpg'
