@@ -22,7 +22,6 @@ brew 'graphviz'
 brew 'jruby'
 brew 'leiningen'
 
-brew 'boot2docker'
 brew 'docker'
 
 brew 'gpg'
