@@ -25,6 +25,8 @@ brew 'leiningen'
 brew 'boot2docker'
 brew 'docker'
 
+brew 'gpg'
+
 brew 'caskroom/cask/brew-cask'
 tap 'caskroom/versions'
 
