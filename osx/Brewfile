@@ -54,6 +54,9 @@ cask 'omnigraffle'
 cask 'scrivener'
 cask 'atom'
 
+brew 'pandoc'
+cask 'basictex'
+
 #productivity - window and keyboards
 cask 'hammerspoon'
 cask 'karabiner'
