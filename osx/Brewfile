@@ -28,8 +28,6 @@ brew 'erlang-r17'
 
 brew 'docker'
 
-brew 'gpg'
-
 brew 'caskroom/cask/brew-cask'
 tap 'caskroom/versions'
 
@@ -62,5 +60,7 @@ cask 'hammerspoon'
 cask 'karabiner'
 cask 'seil'
 cask 'flux-beta'
+
+cask 'gpgtools'
 
 cask 'google-drive'
