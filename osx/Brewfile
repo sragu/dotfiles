@@ -32,6 +32,7 @@ brew 'caskroom/cask/brew-cask'
 tap 'caskroom/versions'
 
 cask 'font-inconsolata'
+cask 'font-hack'
 cask 'intellij-idea-ce'
 cask 'iterm2'
 cask 'java'
