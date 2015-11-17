@@ -65,3 +65,5 @@ cask 'flux-beta'
 cask 'gpgtools'
 
 cask 'google-drive'
+
+cask 'openzfs'
